@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from pathlib import Path
 
 from environs import Env
 
@@ -14,13 +15,14 @@ class DbConfig:
 @dataclass
 class TgBot:
     token: str
-    admin_ids: list[int]
+    admin_ids: list
+    group_ids: list
     use_redis: bool
 
 
 @dataclass
 class Miscellaneous:
-    other_params: str = None
+    sentry_sdk: str
 
 
 @dataclass
@@ -38,6 +40,7 @@ def load_config(path: str = None):
         tg_bot=TgBot(
             token=env.str("BOT_TOKEN"),
             admin_ids=list(map(int, env.list("ADMINS"))),
+            group_ids=list(map(int, env.list("GROUPS"))),
             use_redis=env.bool("USE_REDIS"),
         ),
         db=DbConfig(
@@ -46,5 +49,12 @@ def load_config(path: str = None):
             user=env.str('DB_USER'),
             database=env.str('DB_NAME')
         ),
-        misc=Miscellaneous()
+        misc=Miscellaneous(
+            sentry_sdk=env.str('SENTRY_SDK')
+        )
     )
+
+
+I18N_DOMAIN = 'testbot'
+BASE_DIR = Path(__file__).parent
+LOCALES_DIR = BASE_DIR / 'locales'

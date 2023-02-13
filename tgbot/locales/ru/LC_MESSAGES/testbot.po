@@ -1,0 +1,127 @@
+# Russian translations for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-02-13 18:20+0500\n"
+"PO-Revision-Date: 2023-02-13 18:52+0500\n"
+"Last-Translator: \n"
+"Language-Team: ru <LL@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#: handlers/user.py:26 handlers/user.py:37 handlers/user.py:99
+#: handlers/user.py:125 handlers/user.py:131
+msgid "Kerakli bo'limni tanlang! 👇"
+msgstr "Выберите нужный раздел! 👇"
+
+#: handlers/user.py:29
+msgid ""
+"Assalomualaykum! 👋\n"
+"Botimizga xushkelibsiz kerakli tilni tanlang"
+msgstr "Привет! 👋\\пДобро пожаловать в наш бот, выберите нужный язык"
+
+#: handlers/user.py:42
+msgid "Iltimos ismingizni kiriting 👤"
+msgstr "Пожалуйста, введите ваше имя 👤"
+
+#: handlers/user.py:47
+msgid "Tilni o'zgartirish 🔄"
+msgstr "Сменить язык 🔄"
+
+#: handlers/user.py:52
+msgid "Iltimos ID raqamingizni kiriting 🆔"
+msgstr "Пожалуйста, введите свой идентификационный номер 🆔"
+
+#: handlers/user.py:60
+msgid "👤 Shaxsiy kabinetga xush kelibsiz"
+msgstr "👤 Добро пожаловать в личный кабинет"
+
+#: handlers/user.py:63
+msgid "❌ Xato id kiritildi. Ilitimos qayta tekshiib kiriting"
+msgstr "❌ Неправилmный id. Пожалуйста, проверьте еще раз"
+
+#: handlers/user.py:69
+msgid "Yuklaringizdan birini tanlang! 👇"
+msgstr "Выберите один из ваших грузов! 👇"
+
+#: handlers/user.py:75
+msgid ""
+"🤵‍♂️ Hurmatli {user_name}\n"
+"📦 Siz {container_type} {container_number} buyurtma bergansiz.\n"
+"📅 Yuklash sanasi: {load_date}\n"
+"📥 Yuklash Manzili: {load_address}\n"
+"📅 Yuborish sanasi: {send_date}\n"
+"📬 Dislokatsiya: {dislocation}\n"
+"📤 Yetkazish manzili: {delivery_address}\n"
+"↗️ Buyurtma yo'nalishi: {burning_address}\n"
+"📅 Kelish sanasi: {arrival_date}"
+msgstr ""
+"🤵‍♂️ Уважаемый {user_name}\n"
+"📦 Вы заказали {container_type} {container_number}.\n"
+"📅 Дата загрузки: {load_date}\n"
+"📥 Адрес для скачивания: {load_address}\n"
+"📅 Дата отправки: {send_date}\n"
+"📬 Вывих: {dislocation}\n"
+"📤 Адрес доставки: {delivery_address}\n"
+"↗️ Направление заказа: {burning_address}\n"
+"📅 Дата прибытия: {arrival_date}"
+
+#: handlers/user.py:98
+msgid "Tili o'zgartirildi"
+msgstr "Язык изменён"
+
+#: handlers/user.py:105
+msgid "Iltimos telefon raqamingizin kiriting 📲"
+msgstr "Пожалуйста, введите свой номер телефона 📲"
+
+#: handlers/user.py:111
+msgid "Sizga qaysi yo'nalish kerak?"
+msgstr "Какое направление вам нужно?"
+
+#: handlers/user.py:112
+msgid "Kerakli bo'lgan yo'nalishni tanlang 👇"
+msgstr "Выберите нужный раздел! 👇"
+
+#: handlers/user.py:124
+msgid "Tez orada mutaxassislarimiz siz bilan bog'lanadi! 👨‍💻"
+msgstr "Наши специалисты свяжутся с вами в ближайшее время! 👨‍💻"
+
+#: keyboards/inline.py:13 keyboards/inline.py:33 keyboards/inline.py:39
+#: keyboards/inline.py:46 keyboards/inline.py:49
+msgid "Orqaga 🔙"
+msgstr "Назад 🔙"
+
+#: keyboards/inline.py:20 keyboards/inline.py:24
+msgid "💸 Narxni hisoblatish"
+msgstr "💸 Расчет цены"
+
+#: keyboards/inline.py:21 keyboards/inline.py:25 keyboards/inline.py:38
+msgid "📦 Yuk haqida ma'lumot olish"
+msgstr "📦 Получить информацию о грузе"
+
+#: keyboards/inline.py:22 keyboards/inline.py:26
+msgid "🛠 Sozlamalar"
+msgstr "🛠 Настройки"
+
+#: keyboards/inline.py:31
+msgid "Pekin - Toshkent"
+msgstr "Пекин - Ташкент"
+
+#: keyboards/inline.py:32
+msgid "Toshkent - Pekin"
+msgstr "Ташкент - Пекин"
+
+#: keyboards/reply.py:8
+msgid "Kontaktni yuborish 📱"
+msgstr "Отправить контакт 📱"
