@@ -27,14 +27,30 @@ async def menu_btns(locale=False):
     return menu_btn
 
 cat_btn = InlineKeyboardMarkup(row_width=1)
-
-cat_btn.add(InlineKeyboardButton(_("Pekin - Toshkent"), callback_data="catPekin - Toshkent"))
-cat_btn.add(InlineKeyboardButton(_("Toshkent - Pekin"), callback_data="catToshkent - Pekin"))
+cat_btn.add(InlineKeyboardButton(_("Xitoy"), callback_data="catXitoy"))
+cat_btn.add(InlineKeyboardButton(_("Turkiya"), callback_data="catTurkiya"))
+cat_btn.add(InlineKeyboardButton(_("Yevropa"), callback_data="catYevropa"))
 cat_btn.add(InlineKeyboardButton(_("Orqaga 🔙"), callback_data="back"))
 
 
-choice_btn = InlineKeyboardMarkup(row_width=1)
+road_btn = InlineKeyboardMarkup(row_width=1)
+road_btn.add(InlineKeyboardButton(_("Temir yo'l 🚂"), callback_data="Temir yo'l"))
+road_btn.add(InlineKeyboardButton(_("Avto 🚛"), callback_data="Avto"))
+road_btn.add(InlineKeyboardButton(_("Avia ✈️"), callback_data="Avia"))
+road_btn.add(InlineKeyboardButton(_("Orqaga 🔙"), callback_data="back"))
 
+
+async def weight_btns(road_type=False):
+    weight_btn = InlineKeyboardMarkup(row_width=1)
+    if road_type:
+        weight_btn.add(InlineKeyboardButton(_("To'liq konteyner (40HC, 20GP)"), callback_data="To'liq konteyner (40HC, 20GP)"))
+    else:
+        weight_btn.add(InlineKeyboardButton(_("To'liq fura (90, 120)"), callback_data="To'liq fura (90, 120)"))
+    weight_btn.add(InlineKeyboardButton(_("Yeg'ma yuk (Sborniy)"), callback_data="Yeg'ma yuk (Sborniy)"))
+    weight_btn.add(InlineKeyboardButton(_("Orqaga 🔙"), callback_data="back"))
+    return weight_btn
+
+choice_btn = InlineKeyboardMarkup(row_width=1)
 choice_btn.add(InlineKeyboardButton(_("📦 Yuk haqida ma'lumot olish"), callback_data="cargo_info"))
 choice_btn.add(InlineKeyboardButton(_("Orqaga 🔙"), callback_data="back"))
 

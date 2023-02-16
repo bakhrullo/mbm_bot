@@ -12,7 +12,7 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from tgbot.config import load_config, Config, I18N_DOMAIN, LOCALES_DIR
 from tgbot.filters.admin import AdminFilter
 from tgbot.filters.is_digit import IsDigitFilter
-from tgbot.handlers.admin import register_admin
+# from tgbot.handlers.admin import register_admin
 from tgbot.handlers.echo import register_echo
 from tgbot.handlers.user import register_user
 from tgbot.middlewares.environment import EnvironmentMiddleware
@@ -30,12 +30,12 @@ def register_all_middlewares(dp, config, scheduler):
 
 
 def register_all_filters(dp):
-    dp.filters_factory.bind(AdminFilter)
+    # dp.filters_factory.bind(AdminFilter)
     dp.filters_factory.bind(IsDigitFilter)
 
 
 def register_all_handlers(dp):
-    register_admin(dp)
+    # register_admin(dp)
     register_user(dp)
 
     # debug
