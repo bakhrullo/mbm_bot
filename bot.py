@@ -44,23 +44,19 @@ def register_all_handlers(dp):
 
 async def send_message_to_admin(bot: Bot, config: Config):
     for admin_id in config.tg_bot.admin_ids:
-        await bot.send_message(text="Bugungi excel faylni tashlang!", chat_id=admin_id)
-
+        try:
+            await bot.send_message(text="Bugungi excel faylni tashlang!", chat_id=admin_id)
+        except:
+            pass
 
 def scheduled_jobs(scheduler, bot, config):
-    date = datetime.now(timezone("Asia/Tashkent")).hour
-    if date == 10:
-        scheduler.add_job(send_message_to_admin, "interval", args=(bot, config), minutes=10, id="job")
-
-    else:
-        if len(scheduler.get_jobs()) == 2:
-            scheduler.remove_job("job")
-        else:
-            pass
+    date = datetime.now(timezone("Asia/Tashkent")).date()
+    scheduler.add_job(send_message_to_admin, "interval", args=(bot, config), minutes=10, end_date=f"{date} 22:00:00",
+                      id="job")
 
 
 def set_scheduled_jobs(scheduler, bot, config):
-    scheduler.add_job(scheduled_jobs, "cron", args=(scheduler, bot, config), hour="10-22", timezone="Asia/Tashkent")
+    scheduler.add_job(scheduled_jobs, "cron", args=(scheduler, bot, config), hour="10", timezone="Asia/Tashkent")
 
 
 async def main():
